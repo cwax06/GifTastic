@@ -27,16 +27,16 @@ $(document).on('click', '.searchButton', function () {
                 var rating = response.data[i].rating;
                 var p = $('<p>').text('Rating: ' + rating);
                 var animated = response.data[i].images.fixed_height.url;
-                var still = response.data[i].images.fixed_height.still.url;
+                var still = response.data[i].images.fixed_height_still.url;
                 var image = $('<img>');
                 image.attr('src', still);
                 image.attr('data-still', still);
                 image.attr('data-animated', animated);
                 image.attr('data-state', 'still');
                 image.addClass('searchImage');
-                searchDiv.append(p);
-                searchDiv.append(image);
-                $('#searches').append(searchDiv);
+                searchDiv.prepend(p);
+                searchDiv.prepend(image);
+                $('#searches').prepend(searchDiv);
             }
         });
 })
