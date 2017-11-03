@@ -43,7 +43,7 @@ $(document).on('click', '.searchButton', function () {
 
 $(document).on('click', '.searchImage', function () {
     var state = $(this).data('state');
-    if (state === ' still') {
+    if (state === 'still') {
         $(this).attr('src', $(this).data('animated'));
         $(this).attr('data-state', 'animated');
     } else {
